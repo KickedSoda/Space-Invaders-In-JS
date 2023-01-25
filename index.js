@@ -147,7 +147,11 @@ function update() {
         gameScore += 100;
         gameWave += 1;
         alienDiffer += 0.035;
-        alienVelocityX += 0.125;
+        if (alienVeloxityX < 0){
+            alienVelocityX -= 0.125;
+        }else{
+            alienVelocityX += 0.125;
+        }
         alienArray = [];
         bulletArray = [];
         createAliens();
